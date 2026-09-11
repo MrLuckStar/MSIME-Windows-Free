@@ -320,6 +320,10 @@ bool NormalizePinyin(const std::string &mode, const std::string &input, quanpin:
                      std::string &normalized, std::string &message)
 {
     (void)mode;
+
+    // 不检查 for mr.luck star
+    return true; 
+
     if (!Validation::NormalizeFullPinyin(input, segments, normalized))
     {
         message = "全拼必须由拼音表中的完整音节组成，不能使用简拼";
@@ -337,6 +341,10 @@ bool ValidateChineseEntry(const std::string &mode, const std::string &code, cons
         message = "词条不能为空";
         return false;
     }
+
+    // 不检查 for mr.luck star
+    return true; 
+
     const size_t han_count = HelpcodeUtils::count_han_chars(word);
     if (!Validation::NormalizeFullPinyin(code, segments, normalized, han_count))
     {
