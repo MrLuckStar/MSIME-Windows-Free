@@ -170,12 +170,12 @@ jobs:
             architecture: x64
             triplet: x64-windows-static
             build_dir: windows/build64-release
-            vcpkg_root: E:\msime-runner\vcpkg-1
+            vcpkg_root: VCPKG_ROOT: C:\vcpkg
           - name: Win32
             architecture: Win32
             triplet: x86-windows-static
             build_dir: windows/build32-release
-            vcpkg_root: E:\msime-runner\vcpkg-2
+            vcpkg_root: VCPKG_ROOT: C:\vcpkg
     steps:
       - name: Check out release commit
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
