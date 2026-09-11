@@ -259,7 +259,7 @@ jobs:
     name: Build Server
     needs: [prepare, dependencies]
     if: ${{ needs.prepare.outputs.should_publish == 'true' }}
-    runs-on: [self-hosted, Windows, X64, msime-windows]
+    runs-on: windows-latest
     env:
       VCPKG_INSTALLATION_ROOT: E:\\msime-runner\\vcpkg-3
     timeout-minutes: 90
@@ -390,7 +390,7 @@ jobs:
     # that spends a signature, so the condition that stops it belongs here rather than being a
     # consequence of four other jobs' conditions that a later edit could quietly undo.
     if: ${{ needs.prepare.outputs.should_publish == 'true' }}
-    runs-on: [self-hosted, Windows, X64, msime-windows]
+    runs-on: windows-latest
     timeout-minutes: 60
     permissions:
       contents: write
