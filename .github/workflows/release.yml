@@ -261,7 +261,7 @@ jobs:
     if: ${{ needs.prepare.outputs.should_publish == 'true' }}
     runs-on: windows-latest
     env:
-      VCPKG_INSTALLATION_ROOT: E:\\msime-runner\\vcpkg-3
+      VCPKG_INSTALLATION_ROOT: C:\vcpkg
     timeout-minutes: 90
     steps:
       - name: Check out release commit
