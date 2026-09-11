@@ -497,7 +497,7 @@ jobs:
           WINDOWS_COMMIT: ${{ needs.prepare.outputs.target_sha }}
         run: >
           python scripts/product_lock.py manifest
-          --windows-commit "$env:WINDOWS_COMMIT"
+          --windows-commit "0000000000000000000000000000000000000000"
           --output installer/app_data/product-manifest.json
 
       - name: Sign the uiAccess server
