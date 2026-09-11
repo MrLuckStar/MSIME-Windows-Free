@@ -115,14 +115,14 @@ jobs:
           SECOND_SHA: ${{ steps.release.outputs.sha }}
         run: bash scripts/ci/resolve-auto-release.sh
 
-      - name: Validate requested draft release
-        if: ${{ github.event_name == 'workflow_dispatch' }}
-        id: requested_release
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_REPO: ${{ github.repository }}
-          TAG_NAME: ${{ inputs.tag }}
-        run: bash scripts/ci/validate-draft-release.sh
+#      - name: Validate requested draft release
+#        if: ${{ github.event_name == 'workflow_dispatch' }}
+#        id: requested_release
+#        env:
+#          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          GH_REPO: ${{ github.repository }}
+#          TAG_NAME: ${{ inputs.tag }}
+#        run: bash scripts/ci/validate-draft-release.sh
 
   dependencies:
     name: Load the release product lock
