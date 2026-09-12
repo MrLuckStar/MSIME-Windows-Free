@@ -37,7 +37,6 @@
 AppId={{A7C3E91F-4B2D-4E8A-9F1C-6D5E8B0A2C4D}
 AppName={#MyAppName}
 AppVersion=1.0.2
-#AppVersion={#MyAppVersion}
 AppPublisher={#MyAppPublisher}
 DefaultDirName={autopf}\metasequoiaime
 DefaultGroupName={#MyAppName}
